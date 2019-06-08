@@ -1,8 +1,15 @@
-<html>
+<html ng-app="appModule">
 	<head>
 		<title>UVT</title>
+		<!-- 3rd party scripts -->
+		<script src="js/angular.min.js"></script>
+		<!-- My scripts -->
+		<script src="app/appModule/app.module.js"></script>
+		<script src="app/appModule/appComponent/app.component.js"></script>
+		<script src="app/fragment/fragment.module.js"></script>
+		<script src="app/fragment/fragmentList/fragmentList.component.js"></script>
 	</head>
 	<body>
-	
+		<app-component>Loading app component ... </app-component>
 	</body>
 </html>
