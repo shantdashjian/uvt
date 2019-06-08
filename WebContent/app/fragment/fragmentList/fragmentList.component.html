@@ -1,6 +1,11 @@
 <h2>Fragments:</h2>
-<ul>
-	<li>0-10</li>
-	<li>20-30</li>
-	<li>40-50</li>
-</ul>
+<table class="table-bordered table-condensed">
+	<tr>
+		<th>Start Time</th>
+		<th>End Time</th>
+	</tr>
+	<tr ng-repeat="fragment in vm.fragments">
+		<td><input ng-model="fragment.startTime"></td>
+		<td><input ng-model="fragment.endTime"></td>
+	</tr>
+</table>
