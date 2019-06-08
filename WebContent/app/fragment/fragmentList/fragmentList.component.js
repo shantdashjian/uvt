@@ -4,6 +4,8 @@ angular.module('fragment')
 		controller : function() {
 			var vm = this;
 			
+			vm.uvt = 0;
+			
 			vm.fragments = [
 				{
 					startTime : 0,
@@ -22,6 +24,24 @@ angular.module('fragment')
 			vm.add = function(fragment) {
 				vm.fragments.push(angular.copy(fragment));
 			};
+			
+			vm.clearFragments = function() {
+				vm.fragments = [];
+			};
+			
+			vm.calculateUVT = function() {
+				let millisecondsViewed = new Map();
+				
+				for (let fragment of vm.fragments) {
+					for (let i = fragment.startTime; i <= fragment.endTime; i++) {
+						if (!millisecondsViewed.has(i)) {
+							millisecondsViewed.set(i, true);
+						}
+					}
+				}
+				
+				vm.uvt = millisecondsViewed.size;
+			}
 		},
 		controllerAs : 'vm'
 	});
