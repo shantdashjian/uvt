@@ -8,16 +8,12 @@ angular.module('fragment')
 			
 			vm.fragments = [
 				{
-					startTime : 0,
-					endTime : 10000
+					startTime : 1,
+					endTime : 1000
 				},
 				{
-					startTime : 10000,
-					endTime : 20000
-				},
-				{
-					startTime : 20000,
-					endTime : 30000
+					startTime : 1001,
+					endTime : 2000
 				}
 			];
 			
@@ -27,6 +23,7 @@ angular.module('fragment')
 			
 			vm.clearFragments = function() {
 				vm.fragments = [];
+				vm.uvt = 0;
 			};
 			
 			vm.calculateUVT = function() {
@@ -34,8 +31,8 @@ angular.module('fragment')
 				
 				for (let fragment of vm.fragments) {
 					for (let i = fragment.startTime; i <= fragment.endTime; i++) {
-						if (!millisecondsViewed.has(i)) {
-							millisecondsViewed.set(i, true);
+						if (!millisecondsViewed.has(i.toString())) {
+							millisecondsViewed.set(i.toString(), true);
 						}
 					}
 				}
