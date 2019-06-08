@@ -1,4 +1,9 @@
 <h2>Fragments:</h2>
+<form class="form-inline">
+	<input class="form-control" placeholder="Start Time" ng-model="fragment.startTime">
+	<input class="form-control" placeholder="End Time" ng-model="fragment.endTime">
+	<input class="btn btn-default" type="submit" value="Add" ng-click="vm.add(fragment); fragment={};">
+</form>
 <table class="table-bordered table-condensed">
 	<tr>
 		<th>Start Time</th>

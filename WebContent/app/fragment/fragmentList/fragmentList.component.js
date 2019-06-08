@@ -18,6 +18,10 @@ angular.module('fragment')
 					endTime : 30000
 				}
 			];
+			
+			vm.add = function(fragment) {
+				vm.fragments.push(angular.copy(fragment));
+			};
 		},
 		controllerAs : 'vm'
 	});
