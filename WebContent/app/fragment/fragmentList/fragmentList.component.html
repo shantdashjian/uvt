@@ -1,20 +1,30 @@
-<h2>Fragments:</h2>
-<form class="form-inline">
-	<input class="form-control" placeholder="Start Time" ng-model="fragment.startTime">
-	<input class="form-control" placeholder="End Time" ng-model="fragment.endTime">
-	<input class="btn btn-default" type="submit" value="Add" ng-click="vm.add(fragment); fragment={};">
-</form>
-<button class="btn btn-warning" ng-click="vm.clearFragments();">Clear List</button>
-<table class="table-bordered table-condensed">
-	<tr>
-		<th>Start Time</th>
-		<th>End Time</th>
-	</tr>
-	<tr ng-repeat="fragment in vm.fragments">
-		<td><input ng-model="fragment.startTime"></td>
-		<td><input ng-model="fragment.endTime"></td>
-	</tr>
-</table>
-<button class="btn btn-success" ng-click="vm.calculateUVT();">Calculate UVT</button>
-<input ng-model="vm.uvt" disabled>
+<div class="row">
+	<div class="col-md-offset-1">
+		<h2>Fragments:</h2>
+		<form class="form-inline">
+			<input class="form-control" placeholder="Start Time"
+				ng-model="fragment.startTime"> <input class="form-control"
+				placeholder="End Time" ng-model="fragment.endTime"> <input
+				class="btn btn-default" type="submit" value="Add"
+				ng-click="vm.add(fragment); fragment={};">
+		</form>
+		<button class="btn btn-warning" ng-click="vm.clearFragments();">Clear
+			List</button>
+		<table class="table-bordered table-condensed">
+			<tr>
+				<th>Start Time</th>
+				<th>End Time</th>
+			</tr>
+			<tr ng-repeat="fragment in vm.fragments">
+				<td><input ng-model="fragment.startTime"></td>
+				<td><input ng-model="fragment.endTime"></td>
+			</tr>
+		</table>
+		<form class="form-inline">
+			<button class="btn btn-success" ng-click="vm.calculateUVT();">Calculate
+				UVT</button>
+			<input ng-model="vm.uvt" class="form-control" disabled>
+		</form>
+	</div>
+</div>
 
