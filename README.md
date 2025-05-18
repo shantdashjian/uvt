@@ -6,7 +6,7 @@ An AngularJS app to demo the Unique View Time algorithm.
 2. [The UVT Algorithm](#the-uvt-algorithm)
 
 ## Application URL
-http://shaundashjian.com:8080/UniqueViewTimeCalculator/
+[https://uniqueviewtime.netlify.app/](https://uniqueviewtime.netlify.app/)
 
 
 ## The UVT Algorithm
