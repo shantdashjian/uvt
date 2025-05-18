@@ -1,4 +1,4 @@
-# uvt-gui
+# UVT
 An AngularJS app to demo the Unique View Time algorithm.
 
 ## In This Document:
